@@ -30,6 +30,8 @@ func Export(reports []Report) {
 		"suggested hub ETA predicted time inc. drive time",
 		"hub ETA drive time",
 		"suggested hub ETA drive time",
+		"hub Distance",
+		"suggested hub distance",
 	}
 	var reportData [][]string
 	reportData = append(reportData, head)
@@ -48,6 +50,8 @@ func Export(reports []Report) {
 			fmt.Sprintf("%f", value.LowestEtaDelivery.ETA.PredictedTime),
 			fmt.Sprintf("%f", value.SelectedDelivery.ETA.DriveTime),
 			fmt.Sprintf("%f", value.LowestEtaDelivery.ETA.DriveTime),
+			fmt.Sprintf("%f", value.SelectedDelivery.Distance),
+			fmt.Sprintf("%f", value.LowestEtaDelivery.Distance),
 		}
 		reportData = append(reportData, row)
 	}
