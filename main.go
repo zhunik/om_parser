@@ -1,13 +1,12 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"github.com/zhunik/om_parser/report"
 	"log"
 	"os"
-)
 
+	"github.com/zhunik/om_parser/report"
+)
 
 func main() {
 
@@ -26,9 +25,8 @@ func main() {
 
 	reports := report.Process(orders)
 
-
 	report.Export(reports)
 
-	printReports, _ := json.Marshal(reports)
-	fmt.Println(string(printReports))
+	//printReports, _ := json.Marshal(reports)
+	//fmt.Println(string(printReports))
 }
